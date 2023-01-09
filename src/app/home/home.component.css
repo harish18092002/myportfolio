@@ -1,0 +1,205 @@
+.loader {
+  width: 48px;
+  height: 48px;
+  /* margin: auto; */
+  /* margin-top: 10px;
+  margin-left: 10px; */
+
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: 750px;
+  position: relative;
+}
+
+.loader:before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  background: #f0808050;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border-radius: 50%;
+  animation: shadow324 0.5s linear infinite;
+}
+
+.loader:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #f08080;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  animation: jump7456 0.5s linear infinite;
+}
+
+@keyframes jump7456 {
+  15% {
+    border-bottom-right-radius: 3px;
+  }
+
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes shadow324 {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+
+/* above is for uiverse */
+button {
+  height: 45px;
+  width: auto;
+  letter-spacing: 0.1em;
+  padding: 10px 30px;
+  transition: 0.5s;
+  position: relative;
+  font-size: 17px;
+  background: #333;
+  border: none;
+  color: #fff;
+}
+
+button:hover {
+  letter-spacing: 0.25em;
+  background: #ff1867;
+  color: #ff1867;
+  box-shadow: 0 0 45px #ff1867;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #222222;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+}
+
+button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+button i::before {
+  content: "";
+  position: absolute;
+  border: 2px solid #ff1867;
+  width: 7px;
+  height: 4px;
+  top: -3.5px;
+  left: 80%;
+  background: #222222;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+button:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+button i::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #ff1867;
+  width: 7px;
+  height: 4px;
+  bottom: -3.5px;
+  left: 20%;
+  background: #222222;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+button:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+/* my code */
+* {
+  background: black;
+}
+body {
+  color: white;
+}
+#port {
+  font-family: "Kolker Brush", cursive;
+  font-size: 70px;
+}
+.header {
+  display: flex;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.nav {
+  margin-left: 100px;
+  display: flex;
+  gap: 60px;
+}
+
+#home {
+  font-size: 20px;
+}
+#abt {
+  font-size: 20px;
+}
+#contact {
+  font-size: 20px;
+}
+.content {
+  display: flex;
+  margin-top: 200px;
+}
+.fcontent {
+  margin-left: 160px;
+
+  font-size: 100px;
+}
+.f2content {
+  padding-top: 2px;
+  margin-top: 20px;
+  font-size: 100px;
+}
+
+#avatar {
+}
+/* the below code is for avatar gradient */
+/* 
+  position: absolute;
+  width: 603px;
+  height: 911px;
+  left: 591px;
+  top: -52px;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../../assets/img/avatar.png);
+  opacity: 0.5; */
