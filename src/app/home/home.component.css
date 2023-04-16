@@ -1,4 +1,13 @@
-* {
+body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: #000000;
+}
+
+.masterdiv {
+  display: grid;
+
   background-color: black;
 }
 
@@ -152,9 +161,7 @@ button:hover i::after {
 /* my code */
 
 
-body {
-  color: white;
-}
+
 
 #port {
   font-family: "Kolker Brush", cursive;
@@ -168,7 +175,8 @@ body {
 }
 
 .nav {
-  margin-left: 100px;
+  margin-top: 2vh;
+  margin-left: 30vh;
   display: flex;
   gap: 60px;
 }
@@ -186,23 +194,46 @@ body {
 }
 
 .content {
+
+  margin-left: 160px;
   display: flex;
-  margin-top: 200px;
+  /* margin-top: 200px; */
+}
+
+.content2 {
+  padding-top: 20vh;
 }
 
 .fcontent {
-  margin-left: 160px;
+  color: white;
+  z-index: 10;
+
 
   font-size: 100px;
 }
 
-.f2content {
-  padding-top: 2px;
-  margin-top: 20px;
-  font-size: 100px;
+.fcontent1 {
+  background: linear-gradient(90deg,
+      #866ee7,
+      #ea60da,
+      #ed8f57,
+      #fbd41d,
+      #2cca91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: block;
+  margin-left: 17vh;
+  font-size: large;
 }
 
-#avatar {}
+#avatar {
+  z-index: 10;
+  margin-left: 15vh;
+  height: 80vh;
+  width: 80vh;
+}
 
 /* the below code is for avatar gradient */
 /* 
@@ -220,17 +251,14 @@ body {
 
 
 .jumbotron {
+  overflow: hidden;
   color: #fff;
-  padding-top: 80px;
-  padding-bottom: 80px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   position: relative;
   border-radius: 0;
-  margin-bottom: 0;
-  overflow: hidden;
-  min-height: 100vh;
+  min-height: 89.5vh;
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
@@ -245,7 +273,7 @@ body {
 }
 
 .jumbotron:before {
-  position: absolute;
+  /* position: absolute; */
   display: block;
   content: "";
   opacity: 0.8;
@@ -518,4 +546,82 @@ body {
   width: 45px;
   height: 45px;
   transform: rotate(-40deg);
+}
+
+
+
+
+/* footer */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.circle-link {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  margin: 8px;
+  background-color: white;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgb(255, 255, 255), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.5s ease-out;
+}
+
+.circle-link:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0px 3px 15px rgb(255, 255, 255);
+}
+
+/* glitch effect */
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgb(255, 255, 255);
+  --animation-color: #000000;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
 }
